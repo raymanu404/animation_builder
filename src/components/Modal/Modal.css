@@ -16,7 +16,8 @@
     animation: openModal 0.4s  ease-out forwards;
 }
 .ModalClosed{
-   display: none;
+   /* display: none; */
+     animation: closeModal 0.4s ease-out forwards;
 }
 
 @keyframes openModal {
@@ -36,5 +37,16 @@
 }
 
 @keyframes closeModal {
-   /* vedem , e mega ciudat la close */
+   0%{
+        opacity:1;
+        transform:translateY(0%);
+   }
+   50%{
+        opacity:0.5;
+        transform:translateY(60%);
+   }
+   100%{
+        opacity:0;
+        transform:translateY(-100%);
+   }
 }
